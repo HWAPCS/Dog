@@ -7,19 +7,21 @@ public class DogMasterTester {
         Dog dog2 = new Dog ("Fido", 2, Dog.Breed.PITBULL, 693);
         Dog dog3 = new Dog ("Rover", 4, Dog.Breed.BORDER_COLLIE, 523);
         
-        System.out.println(dog1.convertToHumanYears());
-        System.out.println(dog1.convertToHumanYearsExact());
-        System.out.println(dog1.convertToHumanYearsRounded());
-        System.out.println(dog1.computeDogIDCheck());
+        boolean broken = false;
         
-        System.out.println(dog2.convertToHumanYears());
-        System.out.println(dog2.convertToHumanYearsExact());
-        System.out.println(dog2.convertToHumanYearsRounded());
-        System.out.println(dog2.computeDogIDCheck());
+        if(dog1.convertToHumanYears() != 13) { broken=true; }
+        if(dog1.convertToHumanYearsExact() != 13.0) { broken=true; }
+        if(dog1.convertToHumanYearsRounded() != 13) { broken=true; }
+        if(dog1.computeDogIDCheck() != 'L') { broken=true; }           //L
         
-        System.out.println(dog3.convertToHumanYears());
-        System.out.println(dog3.convertToHumanYearsExact());
-        System.out.println(dog3.convertToHumanYearsRounded());
-        System.out.println(dog3.computeDogIDCheck());
+        if(dog2.convertToHumanYears() != 18) { broken=true; }         
+        if(dog2.convertToHumanYearsExact() != 18.0) { broken=true; }
+        if(dog2.convertToHumanYearsRounded() != 18) {broken = true;}
+        if(dog2.computeDogIDCheck() !=  'N'){broken = true;}
+        if(dog3.convertToHumanYears() != 32) {broken = true;}
+        if(dog3.convertToHumanYearsExact() != 32.0) {broken = true;}
+        if(dog3.convertToHumanYearsRounded() != 32) {broken = true;}
+        if(dog3.computeDogIDCheck() != 'F'){broken = true;}
+        System.out.println(broken);
     }
 }
