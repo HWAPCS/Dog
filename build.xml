@@ -1,4 +1,4 @@
-<project name=“Dog” basedir="." default="main">
+<project name=“DogBuild” basedir="." default="main">
     <property name="dir.src"     value="project"/>
     <property name="dir.build"   value="build"/>
     <property name="dir.classes" value="${dir.build}/classes"/>
