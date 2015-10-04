@@ -7,6 +7,8 @@ public class DogMasterTester {
         Dog dog2 = new Dog ("Fido", 2, Dog.Breed.PITBULL, 693);
         Dog dog3 = new Dog ("Rover", 4, Dog.Breed.BORDER_COLLIE, 523);
         
+        boolean broken = false;
+        
         System.out.println(dog1.convertToHumanYears());
         System.out.println(dog1.convertToHumanYearsExact());
         System.out.println(dog1.convertToHumanYearsRounded());
@@ -14,12 +16,12 @@ public class DogMasterTester {
         
         System.out.println(dog2.convertToHumanYears());
         System.out.println(dog2.convertToHumanYearsExact());
-        System.out.println(dog1.convertToHumanYearsRounded());
+        System.out.println(dog2.convertToHumanYearsRounded());
         System.out.println(dog2.computeDogIDCheck());
         
-        System.out.print(dog3.convertToHumanYears());
-        System.out.print(dog3.convertToHumanYearsExact());
-        System.out.print(dog1.convertToHumanYearsRounded());
-        System.out.print(dog3.computeDogIDCheck());
+        System.out.println(dog3.convertToHumanYears());
+        System.out.println(dog3.convertToHumanYearsExact());
+        System.out.println(dog3.convertToHumanYearsRounded());
+        System.out.println(dog3.computeDogIDCheck());
     }
 }
